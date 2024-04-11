@@ -1,0 +1,2 @@
+<?php /*DEAFULT PAGE TEMPLATE*/ ?>
+

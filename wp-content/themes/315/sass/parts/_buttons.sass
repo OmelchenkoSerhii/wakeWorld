@@ -1,0 +1,127 @@
+.button
+    --webkit-appearence: none
+    position: relative
+    display: inline-block
+    box-sizing: border-box
+    transition: 0.3s
+    font-weight: 600
+
+    border-radius: 12px
+    padding: 10px 20px
+
+    max-width: fit-content
+
+
+    background-color: $color-primary
+    color: #fff
+    font-size: 16px
+    line-height: 1.7em
+    letter-spacing: 0.05em
+    border: 1px solid $color-primary
+    text-align: center
+    transition: 0.3s ease-out
+    min-width: 160px
+    +max-screen($breakpoint-md)
+        padding: 12px 22px
+    +max-screen($breakpoint-sm)
+        padding: 10px 14px
+        min-width: 115px
+    &:hover
+        background-color: transparent
+        border: 1px solid $color-primary
+        color: $color-primary
+        span
+            color: $color-primary
+    &--white
+        background-color: #ffffff
+        color: $color-primary
+        border: 1px solid #ffffff
+        .button__text
+            color: $color-primary
+        &:hover
+            background-color: transparent
+            color: #fff
+            .button__text
+                color: #fff
+    &--arrow
+        padding-left: 20px
+        padding-right: 45px
+        &:hover
+            background-color: $color-primary
+            color: white
+            border-color: $color-primary
+            span
+                right: 10px
+        span
+            position: absolute
+            top: 50%
+            transform: translateY(-47%)
+            right: 15px
+            transition: 0.2s
+    &--orange
+        background: #F2C741
+        color: #fff
+        border: 2px solid #F2C741
+        &:hover
+            background-color: transparent
+            color: #fff
+            border: 2px solid #F2C741
+            .button__text
+                color: #F2C741
+
+
+   
+.buttonIcon
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: center
+    &__icon
+        margin-left: 15px
+        width: 10px
+        min-width: 10px
+        img, svg
+            width: 100%
+            height: auto
+            path, rect
+                transition: 0.3s
+    &:hover
+        svg 
+            path
+                stroke: $color-primary
+            rect
+                fill: $color-primary
+
+.buttonIconBack
+    &__inner
+        display: flex
+        align-items: center
+    &__icon
+        transform: rotate(180deg)
+        margin-right: 15px
+        width: 10px
+        min-width: 10px
+        img
+            width: 100%
+            height: auto
+
+.buttonsBlock
+    &__inner
+        margin-left: -5px
+        margin-right: -5px
+        display: flex
+        flex-wrap: wrap
+        .buttonsBlock--center &
+            justify-content: center
+        .buttonsBlock--right &
+            justify-content: flex-end
+    .button
+        margin: 5px
+.text-color-white
+    .button
+        &:hover
+            background-color: #fff
+            border: 1px solid #fff
+            color: $color-primary
+            span
+                color: #fff

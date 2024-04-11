@@ -1,0 +1,122 @@
+.footer
+	background: $color-primary
+	&__main
+		padding-top: 100px
+		padding-bottom: 100px
+		+max-screen($breakpoint-md)
+			padding-top: 60px
+			padding-bottom: 60px
+		+max-screen($breakpoint-sm)
+			padding-top: 30px
+			padding-bottom: 30px
+
+		&__col
+			&-4
+				+max-screen($breakpoint-lg)
+					padding-top: 40px
+				+max-screen($breakpoint-sm)
+					padding-top: 40px
+		&__logo
+			display: block
+			width: 75px
+			max-width: 100%
+			img
+				width: 100%
+				height: auto
+		
+		&__text
+			margin-top: 28px
+
+		&__nav
+			padding-top: 53px
+			+max-screen($breakpoint-lg)
+				padding-top: 40px
+			+max-screen($breakpoint-sm)
+				padding-top: 20px
+			h4
+				padding-bottom: 17px
+			ul
+				width: 100%
+				margin: -10px 0
+				display: flex
+				flex-direction: column
+				justify-content: center
+			li
+				padding: 7.5px 0
+				line-height: 1em
+				font-size: 16px
+				a
+					transition: 0.3s ease-out
+					display: inline-block
+					line-height: 1em
+					color: #fff
+					+min-screen($breakpoint-md)
+						&:hover
+							color: #fff
+							text-decoration: underline
+							transition: 0.2s
+		
+		&__social
+			padding-top: 50px
+			&__list
+				display: flex
+				align-items: center
+				margin-left: -10px
+				margin-right: -10px
+				li
+					line-height: 0
+					background: #fff
+					margin-left: 5px
+					height: 40px
+					width: 40px
+					display: flex
+					align-items: center
+					justify-content: center
+					border-radius: 5px
+					a
+						display: inline-block
+						width: fit-content
+						height: 40px
+						text-align: center
+						position: relative
+						line-height: 0
+						font-size: 20px
+						color:  $color-primary
+						transition: 0.3s ease-out
+						background: none
+						img
+							position: absolute
+							top: 0
+							left: 0
+							width: 100%
+							height: 100%
+							object-fit: contain
+						i
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate3d(-50%,-50%,0)
+						+min-screen($breakpoint-md)
+							&:hover
+								opacity: 0.8
+		&__newsletter
+			#nf-field-9-wrap
+				.nf-field-label
+					display: none
+	
+	&__bottom
+		padding: 20px 0
+		color: #000
+		background: #fff
+		&__wrapper
+			text-align: center
+		&__inner
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+		&__copyright
+			font-weight: 600
+			opacity: 0.75
+		
+	
